@@ -30,19 +30,20 @@ An intelligent email-processing agent that reads unread Gmail messages, classifi
 ## 📁 Project Structure
 
 automated-email-agent/
-├── models/ # LLM wrapper
-│ └── llm.py
-├── src/ # Core application
-│ ├── classifier.py # Classifies emails
-│ ├── config.py # Environment & config
-│ ├── email_reader.py # Gmail auth and reader
-│ ├── feedback_loop.py # Refines replies with feedback
-│ ├── responder.py # Drafts replies based on classification
-│ └── main.py # Main execution logic
-├── data/ # (Optional) for logs/samples
-├── .env.example # Sample environment variables
-├── requirements.txt # Dependencies
-└── README.md # You're here
+├── models/                 # LLM wrapper
+│   └── llm.py              # Handles interaction with the LLM
+├── src/                    # Core application logic
+│   ├── classifier.py       # Classifies incoming emails
+│   ├── config.py           # Loads environment variables and configuration
+│   ├── email_reader.py     # Handles Gmail API authentication and email reading
+│   ├── feedback_loop.py    # Refines email responses based on user feedback
+│   ├── responder.py        # Generates draft replies based on classification
+│   └── main.py             # Main execution script
+├── data/                   # (Optional) Stores logs or sample email data
+├── .env.example            # Sample environment variables file
+├── requirements.txt        # Python dependencies
+└── README.md               # Project documentation (you're here)
+
 
 
 ---
