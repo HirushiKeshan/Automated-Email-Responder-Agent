@@ -27,63 +27,46 @@ An intelligent email-processing agent that reads unread Gmail messages, classifi
 
 ---
 
-## 📁 Project Structure
-
-automated-email-agent/
-├── models/                 # LLM wrapper
-│   └── llm.py              # Handles interaction with the LLM
-├── src/                    # Core application logic
-│   ├── classifier.py       # Classifies incoming emails
-│   ├── config.py           # Loads environment variables and configuration
-│   ├── email_reader.py     # Handles Gmail API authentication and email reading
-│   ├── feedback_loop.py    # Refines email responses based on user feedback
-│   ├── responder.py        # Generates draft replies based on classification
-│   └── main.py             # Main execution script
-├── data/                   # (Optional) Stores logs or sample email data
-├── .env.example            # Sample environment variables file
-├── requirements.txt        # Python dependencies
-└── README.md               # Project documentation (you're here)
-
-
-
----
 
 ## ⚙️ Setup Instructions
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/automated-email-agent.git
-cd automated-email-agent
-
-2. Create a virtual environment
+git clone https://github.com/HirushiKeshan/Automated-email-Responder-Agent.git
+cd Automated-email-Responder-Agent
+```
+### 2. Create a virtual environment
+```
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-3. Install dependencies
+```
+### 3. Install dependencies
+```
 pip install -r requirements.txt
-
-4. Set up environment variables
+```
+### 4.Set up environment variables
 Create a .env file in the root directory:
-
+```
 GEMINI_API_KEY=your_gemini_api_key
 EMAIL_ID=your_email@gmail.com
 EMAIL_PASSWORD=your_app_specific_password
 
+```
+### 5.Gmail API Setup Guide
+```
+1.Go to the Google Cloud Console.
 
-Gmail API Setup Guide
-Go to the Google Cloud Console.
+2.Create a new project or select an existing one.
 
-Create a new project or select an existing one.
+3.Enable Gmail API for the project.
 
-Enable Gmail API for the project.
+4.Go to Credentials, click Create Credentials → OAuth Client ID
 
-Go to Credentials, click Create Credentials → OAuth Client ID
+5.Download the credentials.json and place it in the root directory.
 
-Download the credentials.json and place it in the root directory.
-
-When you run the app, it will prompt to authenticate and save a token.json.
-
-Running the Agent
-
+6.When you run the app, it will prompt to authenticate and save a token.json.
+```
+### 6.Running the Agent
+```
 python main.py
 
