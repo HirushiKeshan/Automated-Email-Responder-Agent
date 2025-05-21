@@ -1,0 +1,16 @@
+# requirements.txt
+
+# Gmail API
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+
+# LLM & LangChain
+langchain
+google-generativeai
+langchain-google-genai
+
+# Environment
+python-dotenv
+
+
